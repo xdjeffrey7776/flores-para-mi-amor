@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a1f17">
+  <meta name="description" content="Hoy te regalo un poquito de sol. Flores amarillas y unas palabras que salen del corazón, solo para ti.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Un poquito de sol, solo para ti 💛</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230a1f17'/%3E%3Cpath d='M16 25C12 22 5 17 5 12a6 6 0 0 1 11-3 6 6 0 0 1 11 3c0 5-7 10-11 13' fill='%23f6cc59'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js" defer></script>
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <div id="sparkles" class="sparkles" aria-hidden="true"></div>
+  <div class="page-shell">
+    <header class="masthead">
+      <span class="brand"><span class="little-heart" aria-hidden="true">♥</span> PARA MI PERSONA FAVORITA</span>
+      <span class="date"><span class="date-day">21</span><span>DE SEPTIEMBRE</span></span>
+    </header>
+
+    <main id="main">
+      <section class="gift" aria-labelledby="gift-title">
+        <div class="gift-copy">
+          <p class="eyebrow"><span class="small-line" aria-hidden="true"></span> HOY PENSÉ EN TI. COMO SIEMPRE.</p>
+          <h1 id="gift-title">Un poquito <br>de <em>sol,</em><br>solo para ti.</h1>
+          <p class="intro">Porque contigo, hasta los días más simples<br class="desktop-break"> se sienten como primavera.</p>
+          <div class="gift-actions">
+            <button class="primary-button" id="receive" type="button"><span>Recibir mis flores</span><span class="button-heart" aria-hidden="true">♡</span></button>
+            <button class="primary-button" id="read-letter" type="button" hidden><span>Leer tu cartita</span><span class="button-heart" aria-hidden="true">♡</span></button>
+            <p class="button-caption" id="gift-caption">Hay una sorpresa esperando por ti.</p>
+            <button class="quiet-button" id="view-memories" type="button" hidden>Nuestros momentos <span aria-hidden="true">↗</span></button>
+          </div>
+        </div>
+
+        <figure class="bouquet-frame" id="bouquet-frame">
+          <div class="bouquet-glow" aria-hidden="true"></div>
+          <div class="bouquet-image-wrap">
+            <img class="bouquet-image" src="/assets/ramo-amarillo.webp" width="1122" height="1402" alt="Un ramo de flores amarillas, con girasoles, pequeñas margaritas y un lazo dorado, elegido con amor para ti." fetchpriority="high" decoding="async">
+            <div class="flower-secrets" id="flower-secrets" hidden role="group" aria-label="Cinco mensajes escondidos entre las flores">
+              <button class="flower-secret" type="button" style="--left:39%;--top:22%" data-secret="0" aria-label="Descubrir el primer mensaje" aria-pressed="false">♡</button>
+              <button class="flower-secret" type="button" style="--left:62%;--top:19%" data-secret="1" aria-label="Descubrir el segundo mensaje" aria-pressed="false">♡</button>
+              <button class="flower-secret" type="button" style="--left:72%;--top:32%" data-secret="2" aria-label="Descubrir el tercer mensaje" aria-pressed="false">♡</button>
+              <button class="flower-secret" type="button" style="--left:33%;--top:37%" data-secret="3" aria-label="Descubrir el cuarto mensaje" aria-pressed="false">♡</button>
+              <button class="flower-secret" type="button" style="--left:51%;--top:47%" data-secret="4" aria-label="Descubrir el quinto mensaje" aria-pressed="false">♡</button>
+            </div>
+          </div>
+          <figcaption class="bouquet-caption"><span class="caption-stroke" aria-hidden="true"></span><span>para ti, con todo mi amor</span></figcaption>
+          <span class="bouquet-note" aria-hidden="true">un ramo de felicidad</span>
+          <div class="secret-note" id="secret-note" hidden role="status"><span class="secret-number" id="secret-number"></span><p id="secret-text"></p></div>
+        </figure>
+
+        <div class="gift-result" id="gift-result" hidden role="status"><span aria-hidden="true">♥</span> Estas flores son tuyas. Y mi corazón también.</div>
+      </section>
+
+      <section class="memories" id="memories" hidden aria-labelledby="memories-title">
+        <div class="memories-heading"><p class="eyebrow">MIS LUGARES FAVORITOS SON CONTIGO</p><h2 id="memories-title">Lo bonito de <em>nosotros.</em></h2><p>Si pudiera volver a elegir un lugar, elegiría estar a tu lado.</p></div>
+        <div class="memory-carousel" aria-roledescription="carrusel" aria-label="Nuestras fotos">
+          <button id="previous-memory" class="memory-arrow" type="button" aria-label="Ver la foto anterior">‹</button>
+          <figure class="memory-photo"><img id="memory-image" alt=""><figcaption id="memory-caption"></figcaption></figure>
+          <button id="next-memory" class="memory-arrow" type="button" aria-label="Ver la siguiente foto">›</button>
+        </div>
+        <p class="memory-counter" id="memory-counter" role="status"></p>
+        <button type="button" class="primary-button memories-letter" id="memories-letter">Y algo más que quiero decirte <span aria-hidden="true">♡</span></button>
+      </section>
+    </main>
+
+    <footer class="footer"><p>Hay flores que duran un día.<br class="mobile-break"> Lo que siento por ti, <em>todos.</em></p><span class="footer-heart" aria-hidden="true">♡</span></footer>
+  </div>
+
+  <dialog id="letter" class="letter-dialog" aria-labelledby="letter-title">
+    <div class="letter-paper">
+      <button type="button" class="close-letter" id="close-letter" aria-label="Cerrar la carta">×</button>
+      <p class="letter-date">21 DE SEPTIEMBRE <span aria-hidden="true">·</span> PARA TI</p>
+      <span class="letter-heart" aria-hidden="true">♥</span>
+      <h2 id="letter-title">Mi amor,</h2>
+      <div class="letter-body">
+        <p>Hoy quería regalarte flores amarillas. Pero, sobre todo, quería regalarte una sonrisa de esas tuyas que me arreglan el día sin que te des cuenta.</p>
+        <p>Así que hice este pequeño rincón para ti. Para que tengas un lugar al que volver cuando quieras recordar que hay alguien que piensa en ti con una sonrisa tonta y el corazón lleno.</p>
+        <p>Si pudiera, te regalaría un jardín entero. Uno por cada vez que me haces feliz, por cada abrazo que quisiera darte y por todas las cosas bonitas que todavía nos quedan por vivir.</p>
+        <p>Mientras tanto, te dejo estas flores y algo que sí puedo darte de verdad: mi cariño, mi tiempo y mis ganas de seguir eligiéndote en los días bonitos y también en los difíciles.</p>
+        <p class="letter-promise">Porque si la vida es un jardín,<br><em>tú eres mi parte favorita.</em></p>
+        <p>Feliz día de las flores amarillas, mi amor.<br>Qué bonito que existas. Qué suerte la mía de coincidir contigo.</p>
+      </div>
+      <p class="signature">Con todo mi amor,<br><span>alguien que te quiere muchísimo.</span></p>
+      <button type="button" class="letter-done" id="letter-done">Guardar estas palabras en mi corazón <span aria-hidden="true">♡</span></button>
+    </div>
+  </dialog>
+  <aside class="music-dock" id="music-dock" aria-label="Una canción para acompañar tu regalo">
+    <button type="button" class="music-toggle" id="music-toggle" aria-expanded="true" aria-controls="music-panel" aria-label="Minimizar el reproductor de Spotify">
+      <span><span class="music-symbol" aria-hidden="true">♫</span><span id="music-label">Una canción para ti</span></span>
+      <span class="music-toggle-icon" aria-hidden="true">−</span>
+    </button>
+    <div class="music-panel" id="music-panel">
+      <iframe title="Escucha her, de JVKE, en Spotify" src="https://open.spotify.com/embed/track/6G9YlbU3ByPJQvOFDRdwyM?utm_source=generator&amp;theme=0" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <a class="spotify-link" href="https://open.spotify.com/track/6G9YlbU3ByPJQvOFDRdwyM" target="_blank" rel="noopener noreferrer">Escuchar en Spotify <span aria-hidden="true">↗</span></a>
+    </div>
+  </aside>
+  <p class="sr-only" role="status" id="announcement"></p>
+</body>
+</html>
